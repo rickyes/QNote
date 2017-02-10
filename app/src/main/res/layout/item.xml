@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp" >
+
+    <ImageView
+        android:id="@+id/del_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_date"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:src="@mipmap/del" />
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"        android:layout_marginLeft="23dp"
+        android:text="标题"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="21dp"
+        android:layout_toLeftOf="@+id/del_iv"
+        android:alpha="0.5"
+        android:text="2016-06-30" />
+
+</RelativeLayout>

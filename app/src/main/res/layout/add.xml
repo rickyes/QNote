@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/textinputlayout_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <EditText
+        android:id="@+id/edt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="标题"
+        android:ems="10" >
+    </EditText>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textinputlayout_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textinputlayout_user"
+        android:layout_marginTop="10dp">
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:id="@+id/edt_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="内容"
+        android:background="@drawable/add_edit"
+        android:ems="10" >
+    </EditText>
+    </android.support.design.widget.TextInputLayout>
+
+    <note.zhoumq.cn.qnote.FireworkView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fire_work"/>
+    <note.zhoumq.cn.qnote.FireworkView
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fire_work_pwd"/>
+
+    <FrameLayout
+        android:id="@+id/fan_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<note.zhoumq.cn.qnote.LoadingView
+            android:visibility="gone"
+            android:id="@+id/gear_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            app:loading_renderer="GearLoadingRenderer"/>-->
+
+        <note.zhoumq.cn.qnote.LoadingView
+            android:visibility="gone"
+            android:id="@+id/electric_fan_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:loading_renderer="ElectricFanLoadingRenderer" />
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:id="@+id/day"
+        android:layout_alignTop="@+id/night"
+        android:layout_alignRight="@+id/textinputlayout_pwd"
+        android:layout_alignEnd="@+id/textinputlayout_pwd" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="#000000"
+        android:id="@+id/night"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textinputlayout_pwd"
+        android:layout_alignStart="@+id/textinputlayout_pwd" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnFloatingAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:fabSize="normal"
+            app:borderWidth="0dp"
+            android:backgroundTint="@color/colorAccent"
+            android:src="@mipmap/ic_done"
+            android:layout_marginBottom="@dimen/fab_margin_bottom"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            app:rippleColor="@color/rippleColor"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp"
+            />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
